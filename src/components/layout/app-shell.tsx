@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Sidebar } from "@/components/layout/sidebar";
+import { MobileNav, Sidebar } from "@/components/layout/sidebar";
 import { TopBanner } from "@/components/layout/top-banner";
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -10,6 +10,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen">
       <Sidebar />
       <main className="flex-1 px-4 py-5 md:px-7">
+        <MobileNav />
         <TopBanner />
         <section className="mt-6">{children}</section>
         <footer className="mt-10 border-t border-white/10 pt-6">
