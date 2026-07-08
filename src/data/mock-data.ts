@@ -10,12 +10,42 @@ export const sidebarItems = [
 ];
 
 export const metrics = [
-  { label: "Active AI Agents", value: "24", change: "+3.1%" },
-  { label: "Requests Today", value: "18,427", change: "+11.4%" },
-  { label: "Average Latency", value: "842 ms", change: "-5.6%" },
-  { label: "Human Approval Rate", value: "96.2%", change: "+0.9%" },
-  { label: "Prompt Success Rate", value: "98.4%", change: "+0.4%" },
-  { label: "Estimated Daily Cost", value: "$432.18", change: "+2.2%" },
+  {
+    label: "Active AI Agents",
+    value: "24",
+    change: "+3.1%",
+    description: "Agents currently running in production and serving live traffic.",
+  },
+  {
+    label: "Requests Today",
+    value: "18,427",
+    change: "+11.4%",
+    description: "Total API and workflow requests processed across all agents today.",
+  },
+  {
+    label: "Average Latency",
+    value: "842 ms",
+    change: "-5.6%",
+    description: "Average end-to-end response time from request to final model output.",
+  },
+  {
+    label: "Human Approval Rate",
+    value: "96.2%",
+    change: "+0.9%",
+    description: "Percentage of queued high-risk actions approved by human reviewers.",
+  },
+  {
+    label: "Prompt Success Rate",
+    value: "98.4%",
+    change: "+0.4%",
+    description: "Share of prompts that complete with policy-compliant, valid responses.",
+  },
+  {
+    label: "Estimated Daily Cost",
+    value: "$432.18",
+    change: "+2.2%",
+    description: "Projected total inference and orchestration spend for the current day.",
+  },
 ];
 
 export const requestsOverTime = [
@@ -194,6 +224,33 @@ export const models = [
     availability: "99.71%",
     cost: "$0.004",
     health: "Monitoring",
+  },
+];
+
+export const modelExamples = [
+  {
+    model: "GPT-5",
+    useCase: "Customer service policy lookup",
+    prompt: "Summarize card dispute policy for a declined transaction in 4 bullet points.",
+    result: "Provided a concise, policy-grounded summary with escalation criteria.",
+  },
+  {
+    model: "Claude",
+    useCase: "Fraud investigation reasoning",
+    prompt: "Review these transactions and explain likely fraud indicators with confidence.",
+    result: "Returned a structured risk explanation and confidence rationale.",
+  },
+  {
+    model: "Gemini",
+    useCase: "Compliance drafting",
+    prompt: "Draft a compliant response template for unauthorized charge claims.",
+    result: "Generated a reusable template aligned to regulatory language.",
+  },
+  {
+    model: "Llama",
+    useCase: "SQL analytics helper",
+    prompt: "Generate a SQL query to find top 10 accounts by unresolved ticket volume.",
+    result: "Produced executable SQL with join conditions and filter assumptions.",
   },
 ];
 
